@@ -71,9 +71,11 @@ public class CurrentAccount extends BankAccount {
                 if (first.freq > 0) pq.add(first);
                 if (second.freq > 0) pq.add(second);
             }
+
         }
+//        if(IsValid(identity.toString())){}
         tradeLicenseId = identity.toString();
-        System.out.println(tradeLicenseId);
+//        System.out.println(tradeLicenseId);
     }
 
 
