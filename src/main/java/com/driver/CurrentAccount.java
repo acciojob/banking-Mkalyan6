@@ -62,15 +62,17 @@ public class CurrentAccount extends BankAccount {
             // add the most frequent ocuring char to new idString and decrement frequency
             identity.append(first.letter);
             --first.freq;
+              boolean flag=false;
             if (pq.size() > 0) {
                 pair second = pq.remove();
                 // add the char to identity string  nd decrement the frequency
                  identity.append(second.letter);
                 --second.freq;
-
+                  flag=true;
                 if (first.freq > 0) pq.add(first);
                 if (second.freq > 0) pq.add(second);
             }
+            if (flag=false&first.freq > 0) pq.add(first);
 
         }
 //        if(IsValid(identity.toString())){}
